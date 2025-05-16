@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %} Contacts {% endblock title %}
+
+{% block body %} 
+<div class="container ">
+    <img src="https://img.freepik.com/free-vector/contact-us-button_78370-3753.jpg"style="height:417px width=626px; ;"  alt="...">
+</div>
+<div class="container">
+    <div class="mb-3">
+        <form method="post" action="/contact">
+            {% csrf_token %}
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+        <br>
+        <label for="exampleFormControlInput1" class="form-label">Phone number</label>
+        <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+        <br>
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email ">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Tell us about your plan</label>
+        <br>
+        <textarea class="" id="desc" name="desc" rows="3"></textarea>
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <form>
+      </div>
+ {% endblock body %}
